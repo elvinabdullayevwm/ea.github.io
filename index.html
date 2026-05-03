@@ -8,7 +8,6 @@
 </head>
 <body>
 
-<!-- 🔥 YUXARI QIZILI -->
 <div class="top-gold"></div>
 
 <header>
@@ -25,28 +24,12 @@
   <p>Orijinal məhsullar – Premium keyfiyyət</p>
 </section>
 
+<!-- 🔥 BURASI DİNAMİK OLUR -->
 <section class="products" id="productList"></section>
 
-  <div class="card">
-    <img src="img/dior.jpg">
-    <h3>Dior Sauvage</h3>
-    <p>220 AZN</p>
-    <button>Al</button>
-  </div>
-
-  <div class="card">
-    <img src="img/mac.jpg">
-    <h3>MAC Lipstick</h3>
-    <p>70 AZN</p>
-    <button>Al</button>
-  </div>
-
-</section>
-
-<!-- 🔥 AŞAĞI QIZILI -->
 <div class="bottom-gold"></div>
 
-  <script>
+<script>
 let productList = document.getElementById("productList");
 
 let products = JSON.parse(localStorage.getItem("products")) || [
@@ -78,5 +61,6 @@ products.forEach(p => {
   `;
 });
 </script>
+
 </body>
 </html>
