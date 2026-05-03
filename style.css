@@ -1,49 +1,86 @@
 body {
   margin: 0;
   font-family: Arial;
-  background: #111;
+  background: radial-gradient(circle at top, #111, #000);
   color: white;
 }
 
+/* HEADER */
 header {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
-  background: black;
+  padding: 20px 40px;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(10px);
 }
 
 nav a {
-  margin: 0 10px;
+  margin-left: 20px;
   color: gold;
   text-decoration: none;
+  transition: 0.3s;
 }
 
+nav a:hover {
+  color: white;
+}
+
+/* HERO */
 .hero {
   text-align: center;
-  padding: 80px;
-  background: linear-gradient(black, #222);
+  padding: 100px 20px;
 }
 
+.hero h2 {
+  font-size: 40px;
+}
+
+.hero p {
+  color: #aaa;
+}
+
+/* PRODUCTS */
 .products {
   display: flex;
-  gap: 20px;
-  padding: 40px;
   justify-content: center;
+  gap: 30px;
+  padding: 50px;
+  flex-wrap: wrap;
 }
 
+/* CARD */
 .card {
-  background: #222;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
   padding: 20px;
-  border-radius: 10px;
+  width: 250px;
   text-align: center;
-  width: 200px;
+  transition: 0.4s;
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
 .card img {
   width: 100%;
+  border-radius: 10px;
 }
 
 .card:hover {
-  transform: scale(1.05);
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 20px gold;
+}
+
+/* BUTTON */
+button {
+  margin-top: 10px;
+  padding: 10px;
+  background: gold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
   transition: 0.3s;
+}
+
+button:hover {
+  background: white;
 }
