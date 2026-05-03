@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel</title>
+  <style>
+    body {
+      background: #000;
+      color: white;
+      font-family: Arial;
+      padding: 40px;
+    }
+
+    input {
+      display: block;
+      margin: 10px 0;
+      padding: 10px;
+      width: 300px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: gold;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Admin Panel - Məhsul əlavə et</h2>
+
+<input id="name" placeholder="Məhsul adı">
+<input id="price" placeholder="Qiymət">
+<input id="image" placeholder="Şəkil yolu (img/...jpg)">
+
+<button onclick="addProduct()">Əlavə et</button>
+
+<script>
+function addProduct() {
+  let name = document.getElementById("name").value;
+  let price = document.getElementById("price").value;
+  let image = document.getElementById("image").value;
+
+  let products = JSON.parse(localStorage.getItem("products")) || [];
+
+  products.push({ name, price, image });
+
+  localStorage.setItem("products", JSON.stringify(products));
+
+  alert("Məhsul əlavə olundu!");
+}
+</script>
+
+</body>
+</html>
