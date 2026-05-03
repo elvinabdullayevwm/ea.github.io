@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #111;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: black;
+}
+
+nav a {
+  margin: 0 10px;
+  color: gold;
+  text-decoration: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px;
+  background: linear-gradient(black, #222);
+}
+
+.products {
+  display: flex;
+  gap: 20px;
+  padding: 40px;
+  justify-content: center;
+}
+
+.card {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 200px;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
