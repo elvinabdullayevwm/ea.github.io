@@ -46,5 +46,37 @@
 <!-- 🔥 AŞAĞI QIZILI -->
 <div class="bottom-gold"></div>
 
+  <script>
+let productList = document.getElementById("productList");
+
+let products = JSON.parse(localStorage.getItem("products")) || [
+  {
+    name: "Chanel No.5",
+    price: "250 AZN",
+    image: "img/chanel.jpg"
+  },
+  {
+    name: "Dior Sauvage",
+    price: "220 AZN",
+    image: "img/dior.jpg"
+  },
+  {
+    name: "MAC Lipstick",
+    price: "70 AZN",
+    image: "img/mac.jpg"
+  }
+];
+
+products.forEach(p => {
+  productList.innerHTML += `
+    <div class="card">
+      <img src="${p.image}">
+      <h3>${p.name}</h3>
+      <p>${p.price}</p>
+      <button>Al</button>
+    </div>
+  `;
+});
+</script>
 </body>
 </html>
